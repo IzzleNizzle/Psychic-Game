@@ -17,31 +17,34 @@ var keyClickedHistory = [];
 roundReset();
 
 
-document.onkeyup = function game() {
+document.onkeyup = function() {
 
     keyClicked = event.key;
     keyClickedHistory.push(event.key);
     guessed.push(" " + keyClicked);
 
 
+    // for (i = 0; i < guessed.length; i++){
+
+    //     if (keyClicked === guessed[i]){
+    //        keyClicked = "null"; 
+    //     }
+
+    // };
+    
     guessRemaining.textContent = guessesRemaining;
     wins1.textContent = wins;
     losses.textContent = lossCount;
-    lettersGuessed.textContent = guessed;    
+    lettersGuessed.textContent = guessed;
 
-    for (i=0; i < keyClickedHistory.length; i++){
-        if (keyClicked === keyClickedHistory[i]){
-            break game;
-        }
+        // if (keyClicked === "null"){
 
-    }    
-    
+        // } else
 
-
-        if (keyClicked === compChoice) {
+         if (keyClicked === compChoice) {
             wins++
             roundReset();
-        }else {
+        } else {
             guessesRemaining--;
         }
 
