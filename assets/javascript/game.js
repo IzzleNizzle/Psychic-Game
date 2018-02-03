@@ -1,4 +1,3 @@
-
 var wins1 = document.getElementById("wins");
 var losses = document.getElementById("losses");
 var guessRemaining = document.getElementById("guess-remaining");
